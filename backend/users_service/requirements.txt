@@ -1,0 +1,9 @@
+Flask
+Flask-RESTful
+Flask-SQLAlchemy
+python-dotenv
+PyMySQL
+email-validator
+PyJWT
+bcrypt
+cryptography
