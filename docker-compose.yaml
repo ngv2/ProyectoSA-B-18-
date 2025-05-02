@@ -1,0 +1,17 @@
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    networks:
+      - network1
+    ports:
+      - 3307:3306
+    volumes:
+      - ~/Projects/docker/mysql-data:/var/lib/mysql
+
+networks:
+  network1:
+    driver: bridge

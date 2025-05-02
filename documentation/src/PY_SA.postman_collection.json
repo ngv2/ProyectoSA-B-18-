@@ -1,0 +1,4102 @@
+{
+	"info": {
+		"_postman_id": "6133dd92-91c7-4c33-93e8-cf976d9ed5e5",
+		"name": "PY_SA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40731442",
+		"_collection_link": "https://crm888-9690.postman.co/workspace/My-Workspace~da86010e-a25a-407d-8daa-f85bc94dcd39/collection/40731442-6133dd92-91c7-4c33-93e8-cf976d9ed5e5?action=share&source=collection_link&creator=40731442"
+	},
+	"item": [
+		{
+			"name": "users-service",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Registrar Usuario",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Cris\",\r\n  \"apellido\": \"Ax\",\r\n  \"correo_electronico\": \"crisnoeax@gmail.com\",\r\n  \"username\": \"caxpuac\",\r\n  \"telefono\": \"55551234\",\r\n  \"fecha_nacimiento\": \"1995-04-18\",\r\n  \"sexo\": \"masculino\",\r\n  \"contrasena\": \"#Cristian1975\",\r\n  \"foto\": \"https://example.com/foto.jpg\",\r\n  \"direcciones\": [\r\n    {\r\n      \"id_departamento\": 1,\r\n      \"id_ciudad\": 1,\r\n      \"otras_senas\": \"Zona 1, cerca del mercado\"\r\n    },\r\n    {\r\n      \"id_departamento\": 2,\r\n      \"id_ciudad\": 3,\r\n      \"otras_senas\": \"Avenida Reforma, local 12\"\r\n    }\r\n  ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/users/sign_up",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"sign_up"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"nombre\": \"Cris\",\r\n  \"apellido\": \"Ax\",\r\n  \"correo_electronico\": \"crisnoeax@gmail.com\",\r\n  \"username\": \"caxpuac\",\r\n  \"telefono\": \"55551234\",\r\n  \"fecha_nacimiento\": \"1995-04-18\",\r\n  \"sexo\": \"masculino\",\r\n  \"foto\": \"https://example.com/foto.jpg\",\r\n  \"direcciones\": [\r\n    {\r\n      \"id_departamento\": 1,\r\n      \"id_ciudad\": 1,\r\n      \"otras_senas\": \"Zona 1, cerca del mercado\"\r\n    },\r\n    {\r\n      \"id_departamento\": 2,\r\n      \"id_ciudad\": 3,\r\n      \"otras_senas\": \"Avenida Reforma, local 12\"\r\n    }\r\n  ]\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:5000/users/sign_up",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "5000",
+											"path": [
+												"users",
+												"sign_up"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 19 Apr 2025 20:54:26 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "122"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Usuario registrado exitosamente. Revisa tu correo para confirmar.\",\n    \"OK\": true,\n    \"RESPUESTA\": {}\n}"
+								}
+							]
+						},
+						{
+							"name": "Confirmar Cuenta",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/users/confirmation?token=4099d449-6baf-4b40-b73e-e0f91c809441",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"confirmation"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "4099d449-6baf-4b40-b73e-e0f91c809441"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/users/confirmation?token=314de568-9ee5-4457-9a37-7e8e0bbb582f",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"users",
+												"confirmation"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": "314de568-9ee5-4457-9a37-7e8e0bbb582f"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 19 Apr 2025 20:55:41 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "250"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Usuario confirmado exitosamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": {\n        \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUsInRpcG8iOiJ1c2VyIiwiZXhwIjoxNzQ1MDk3MDQxfQ.ouOJCx0oC_O-hM_QuVGkASBnUfOva0t4rfhNHYx0jVs\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Login",
+							"request": {
+								"auth": {
+									"type": "bearer"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuario\": \"crisnoeax@gmail.com\",\r\n    \"contrasena\": \"@Cristian1975\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/users/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Username",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"usuario\": \"caxpuac\",\r\n    \"contrasena\": \"#Cristian1975\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:5000/users/login",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "5000",
+											"path": [
+												"users",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 19 Apr 2025 21:16:33 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "276"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Inicio de sesión exitoso.\",\n    \"OK\": true,\n    \"RESPUESTA\": {\n        \"ACCESS_TOKEN\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjYsInRpcG8iOiJ1c2VyIiwiZXhwIjoxNzQ1MTA0NTkzfQ.hAsFINfvayXuvwspfQx27SHsWXHDSUU9T2e0U95UE50\",\n        \"TIPO_USUARIO\": \"user\"\n    }\n}"
+								},
+								{
+									"name": "Correo",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"usuario\": \"crisnoeax@gmail.com\",\r\n    \"contrasena\": \"#Cristian1975\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:5000/users/login",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "5000",
+											"path": [
+												"users",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 19 Apr 2025 21:17:07 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "276"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Inicio de sesión exitoso.\",\n    \"OK\": true,\n    \"RESPUESTA\": {\n        \"ACCESS_TOKEN\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjYsInRpcG8iOiJ1c2VyIiwiZXhwIjoxNzQ1MTA0NjI3fQ.yyhAED4AqTcKKpUErufgXZ6kQqI1hI91JmGwlcmvqc4\",\n        \"TIPO_USUARIO\": \"user\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Solicitud Recuperacion Contraseña",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5000/users/pass-recover?usuario=caxpuac",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"pass-recover"
+									],
+									"query": [
+										{
+											"key": "usuario",
+											"value": "caxpuac"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://127.0.0.1:5000/users/pass-recover?usuario=caxpuac",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "5000",
+											"path": [
+												"users",
+												"pass-recover"
+											],
+											"query": [
+												{
+													"key": "usuario",
+													"value": "caxpuac"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 19 Apr 2025 21:28:07 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "124"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Se ha enviado el enlace de recuperación al correo del usuario.\",\n    \"OK\": true,\n    \"RESPUESTA\": {}\n}"
+								}
+							]
+						},
+						{
+							"name": "Recuperacion de contraseña",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"contrasena\": \"@Cristian1975\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/users/pass-recover?token=33270ba4-9833-4955-9be5-09d30f8be0d9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"pass-recover"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "33270ba4-9833-4955-9be5-09d30f8be0d9"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"contrasena\": \"@Cristian1975\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/users/pass-recover?token=33270ba4-9833-4955-9be5-09d30f8be0d9",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"users",
+												"pass-recover"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": "33270ba4-9833-4955-9be5-09d30f8be0d9"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 19 Apr 2025 23:27:45 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "98"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Contraseña actualizada exitosamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": {}\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Usuarios",
+					"item": [
+						{
+							"name": "Crear Usuario",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Ana\",\r\n  \"apellido\": \"Ramírez\",\r\n  \"correo_electronico\": \"crisnoeax+1@gmail.com\",\r\n  \"username\": \"ana_admin\",\r\n  \"telefono\": \"44556677\",\r\n  \"fecha_nacimiento\": \"1990-06-15\",\r\n  \"sexo\": \"femenino\",\r\n  \"contrasena\": \"Admin$2024\",\r\n  \"tipo\": \"admin\",\r\n  \"estado\": \"activo\",\r\n  \"foto\": \"\",\r\n  \"enviar_confirmacion\": false,\r\n  \"direcciones\": [\r\n    {\r\n      \"id_departamento\": 1,\r\n      \"id_ciudad\": 1,\r\n      \"otras_senas\": \"3a Avenida 4-55, Zona 9\"\r\n    }\r\n  ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5000/users/new",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"new"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"nombre\": \"Ana\",\r\n  \"apellido\": \"Ramírez\",\r\n  \"correo_electronico\": \"crisnoeax+1@gmail.com\",\r\n  \"username\": \"ana_admin\",\r\n  \"telefono\": \"44556677\",\r\n  \"fecha_nacimiento\": \"1990-06-15\",\r\n  \"sexo\": \"femenino\",\r\n  \"contrasena\": \"Admin$2024\",\r\n  \"tipo\": \"admin\",\r\n  \"estado\": \"activo\",\r\n  \"foto\": \"\",\r\n  \"enviar_confirmacion\": false,\r\n  \"direcciones\": [\r\n    {\r\n      \"id_departamento\": 1,\r\n      \"id_ciudad\": 1,\r\n      \"otras_senas\": \"3a Avenida 4-55, Zona 9\"\r\n    }\r\n  ]\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://127.0.0.1:5000/users/new",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "5000",
+											"path": [
+												"users",
+												"new"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 20 Apr 2025 00:49:18 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "85"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Usuario creado exitosamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": {}\n}"
+								}
+							]
+						},
+						{
+							"name": "Actualizar Usuario",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Juan\",\r\n  \"apellido\": \"Pérez Gómez\",\r\n  \"correo_electronico\": \"juanperez2@ejemplo.com\",\r\n  \"username\": \"juanperez2\",\r\n  \"telefono\": \"87654321\",\r\n  \"fecha_nacimiento\": \"1990-01-01\",\r\n  \"sexo\": \"masculino\",\r\n  \"foto\": \"https://miapp.com/imagenes/juan2.png\",\r\n  \"estado\": \"activo\",\r\n  \"tipo\": \"admin\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/users/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"nombre\": \"Juan\",\r\n  \"apellido\": \"Pérez Gómez\",\r\n  \"correo_electronico\": \"juanperez2@ejemplo.com\",\r\n  \"username\": \"juanperez2\",\r\n  \"telefono\": \"87654321\",\r\n  \"fecha_nacimiento\": \"1990-01-01\",\r\n  \"sexo\": \"masculino\",\r\n  \"foto\": \"https://miapp.com/imagenes/juan2.png\",\r\n  \"estado\": \"activo\",\r\n  \"tipo\": \"admin\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/users/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"users",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 20 Apr 2025 01:50:09 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "91"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Usuario actualizado correctamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": {}\n}"
+								}
+							]
+						},
+						{
+							"name": "Inactivar Usuario",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/users/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/users/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"users",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 20 Apr 2025 01:51:40 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "90"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Usuario inactivado correctamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": {}\n}"
+								}
+							]
+						},
+						{
+							"name": "Reactivar Usuario",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/users/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/users/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"users",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 20 Apr 2025 01:52:33 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "90"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Usuario reactivado correctamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": {}\n}"
+								}
+							]
+						},
+						{
+							"name": "Get All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/users/?page=0&size=10&sortBy=nombre&sortDir=asc&search=juan",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										""
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										},
+										{
+											"key": "sortBy",
+											"value": "nombre"
+										},
+										{
+											"key": "sortDir",
+											"value": "asc"
+										},
+										{
+											"key": "search",
+											"value": "juan"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/users/?page=0&size=10&sortBy=nombre&sortDir=asc&search=juan",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"users",
+												""
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0"
+												},
+												{
+													"key": "size",
+													"value": "10"
+												},
+												{
+													"key": "sortBy",
+													"value": "nombre"
+												},
+												{
+													"key": "sortDir",
+													"value": "asc"
+												},
+												{
+													"key": "search",
+													"value": "juan"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 20 Apr 2025 18:18:34 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "455"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Usuarios obtenidos correctamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": {\n        \"pagina\": 0,\n        \"tamanio\": 10,\n        \"total\": 1,\n        \"usuarios\": [\n            {\n                \"apellido\": \"Pérez Gómez\",\n                \"correo_electronico\": \"juanperez2@ejemplo.com\",\n                \"estado\": \"activo\",\n                \"id_usuario\": 2,\n                \"nombre\": \"Juan\",\n                \"telefono\": \"87654321\",\n                \"tipo\": \"admin\",\n                \"username\": \"juanperez2\"\n            }\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/users/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/users/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"users",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 20 Apr 2025 18:29:37 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "769"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Usuario obtenido correctamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": {\n        \"apellido\": \"Pérez Gómez\",\n        \"correo_electronico\": \"juanperez2@ejemplo.com\",\n        \"direcciones\": [\n            {\n                \"id_ciudad\": 1,\n                \"id_departamento\": 1,\n                \"id_direccion\": 1,\n                \"otras_senas\": \"Zona 1, cerca del mercado\"\n            },\n            {\n                \"id_ciudad\": 3,\n                \"id_departamento\": 2,\n                \"id_direccion\": 2,\n                \"otras_senas\": \"Avenida Reforma, local 12\"\n            }\n        ],\n        \"estado\": \"activo\",\n        \"fecha_nacimiento\": \"1990-01-01\",\n        \"foto\": \"https://miapp.com/imagenes/juan2.png\",\n        \"id_usuario\": 2,\n        \"nombre\": \"Juan\",\n        \"sexo\": \"masculino\",\n        \"telefono\": \"87654321\",\n        \"tipo\": \"admin\",\n        \"username\": \"juanperez2\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Agregar direccion por id user",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id_departamento\": 1,\r\n  \"id_ciudad\": 1,\r\n  \"otras_senas\": \"Colonia Las Flores, casa 10\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/users/address/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"address",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"id_departamento\": 1,\r\n  \"id_ciudad\": 1,\r\n  \"otras_senas\": \"Colonia Las Flores, casa 10\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/users/address/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"users",
+												"address",
+												"2"
+											]
+										}
+									},
+									"status": "CREATED",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 20 Apr 2025 18:38:18 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "119"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Dirección creada correctamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": {\n        \"id_direccion\": 12\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Reportes de usuarios",
+					"item": [
+						{
+							"name": "Crear reporte",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"descripcion\": \"Actividad sospechosa en el perfil del usuario.\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/users/report/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"report",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"descripcion\": \"Actividad sospechosa en el perfil del usuario.\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/users/report/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"users",
+												"report",
+												"2"
+											]
+										}
+									},
+									"status": "CREATED",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 20 Apr 2025 18:54:35 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "108"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Reporte creado exitosamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": {\n        \"id_reporte\": 1\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Actualizar reporte",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"descripcion\": \"Actividad sospechosa en el perfil del usuario. Nunca usa tarjeta\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/users/report/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"report",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Actualizar",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"descripcion\": \"Actividad sospechosa en el perfil del usuario. Nunca usa tarjeta\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/users/report/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"users",
+												"report",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 20 Apr 2025 19:01:23 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "91"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Reporte actualizado correctamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": {}\n}"
+								}
+							]
+						},
+						{
+							"name": "Eliminar reporte",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/users/report/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"report",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/users/report/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"users",
+												"report",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 20 Apr 2025 19:03:18 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "89"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Reporte eliminado correctamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": {}\n}"
+								}
+							]
+						},
+						{
+							"name": "Obtener reportes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/users/report/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"report",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/users/report/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"users",
+												"report",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 20 Apr 2025 19:04:26 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "956"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Reportes obtenidos correctamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": [\n        {\n            \"descripcion\": \"Actividad sospechosa en el perfil del usuario.\",\n            \"fecha\": \"2025-04-20 19:03:54\",\n            \"id_reporte\": 2\n        },\n        {\n            \"descripcion\": \"Actividad sospechosa en el perfil del usuario.\",\n            \"fecha\": \"2025-04-20 19:03:55\",\n            \"id_reporte\": 3\n        },\n        {\n            \"descripcion\": \"Actividad sospechosa en el perfil del usuario.\",\n            \"fecha\": \"2025-04-20 19:03:56\",\n            \"id_reporte\": 4\n        },\n        {\n            \"descripcion\": \"Actividad sospechosa en el perfil del usuario.\",\n            \"fecha\": \"2025-04-20 19:03:57\",\n            \"id_reporte\": 5\n        },\n        {\n            \"descripcion\": \"Actividad sospechosa en el perfil del usuario.\",\n            \"fecha\": \"2025-04-20 19:03:57\",\n            \"id_reporte\": 6\n        },\n        {\n            \"descripcion\": \"Actividad sospechosa en el perfil del usuario.\",\n            \"fecha\": \"2025-04-20 19:03:58\",\n            \"id_reporte\": 7\n        }\n    ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Perfil",
+					"item": [
+						{
+							"name": "Obtener perfil",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/users/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/users/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"users",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 20 Apr 2025 19:06:37 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "921"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Usuario obtenido correctamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": {\n        \"apellido\": \"Pérez Gómez\",\n        \"correo_electronico\": \"juanperez2@ejemplo.com\",\n        \"direcciones\": [\n            {\n                \"id_ciudad\": 1,\n                \"id_departamento\": 1,\n                \"id_direccion\": 1,\n                \"otras_senas\": \"Zona 1, cerca del mercado\"\n            },\n            {\n                \"id_ciudad\": 3,\n                \"id_departamento\": 2,\n                \"id_direccion\": 2,\n                \"otras_senas\": \"Avenida Reforma, local 12\"\n            },\n            {\n                \"id_ciudad\": 1,\n                \"id_departamento\": 1,\n                \"id_direccion\": 12,\n                \"otras_senas\": \"Colonia Las Flores, casa 10\"\n            }\n        ],\n        \"estado\": \"activo\",\n        \"fecha_nacimiento\": \"1990-01-01\",\n        \"foto\": \"https://miapp.com/imagenes/juan2.png\",\n        \"id_usuario\": 2,\n        \"nombre\": \"Juan\",\n        \"sexo\": \"masculino\",\n        \"telefono\": \"87654321\",\n        \"tipo\": \"admin\",\n        \"username\": \"juanperez2\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Actualizar perfil",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"correo_electronico\": \"nuevoemail@ejemplo.com\",\r\n  \"telefono\": \"12345678\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/users/profile",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"profile"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"correo_electronico\": \"nuevoemail@ejemplo.com\",\r\n  \"telefono\": \"12345678\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/users/profile",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"users",
+												"profile"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 20 Apr 2025 19:21:47 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "90"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Perfil actualizado correctamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": {}\n}"
+								}
+							]
+						},
+						{
+							"name": "Crear direccion para usuario autenticado",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id_departamento\": 1,\r\n  \"id_ciudad\": 2,\r\n  \"otras_senas\": \"Barrio Las Flores, casa azul\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/users/address",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"address"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"id_departamento\": 1,\r\n  \"id_ciudad\": 2,\r\n  \"otras_senas\": \"Barrio Las Flores, casa azul\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/users/address",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"users",
+												"address"
+											]
+										}
+									},
+									"status": "CREATED",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 20 Apr 2025 19:23:44 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "119"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Dirección creada correctamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": {\n        \"id_direccion\": 14\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Actualizar direccion para usuario autenticado",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id_departamento\": 2,\r\n  \"id_ciudad\": 3,\r\n  \"otras_senas\": \"Colonia Los Pinos, apartamento B-302\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/users/address/14",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"address",
+										"14"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"id_departamento\": 2,\r\n  \"id_ciudad\": 3,\r\n  \"otras_senas\": \"Colonia Los Pinos, apartamento B-302\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/users/address/14",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"users",
+												"address",
+												"14"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 20 Apr 2025 19:25:45 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "98"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Dirección actualizada correctamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": {}\n}"
+								}
+							]
+						},
+						{
+							"name": "Eliminar Direccion para usuario autenticado",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/users/address/14",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"address",
+										"14"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/users/address/14",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"users",
+												"address",
+												"14"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 20 Apr 2025 19:27:12 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "96"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Dirección eliminada correctamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": {}\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Catalogos",
+					"item": [
+						{
+							"name": "Obtener departamentos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/users/departments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"departments"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/users/departments",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"users",
+												"departments"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 12:14:43 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "359"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Departamentos obtenidos correctamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": [\n        {\n            \"descripcion\": \"Departamento central del país\",\n            \"id_departamento\": 1,\n            \"nombre\": \"Guatemala\"\n        },\n        {\n            \"descripcion\": \"Zona turística con volcanes\",\n            \"id_departamento\": 2,\n            \"nombre\": \"Sacatepéquez\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Obtener ciudades por departamento",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/users/departments/1/cities",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"departments",
+										"1",
+										"cities"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Obtener departamentos Copy",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/users/departments/1/cities",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"users",
+												"departments",
+												"1",
+												"cities"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 12:15:17 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "330"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Ciudades obtenidas correctamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": [\n        {\n            \"descripcion\": \"Capital del país\",\n            \"id_ciudad\": 1,\n            \"nombre\": \"Ciudad de Guatemala\"\n        },\n        {\n            \"descripcion\": \"Municipio aledaño a la capital\",\n            \"id_ciudad\": 2,\n            \"nombre\": \"Mixco\"\n        }\n    ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Shared",
+					"item": [
+						{
+							"name": "Actualizar total compra",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"monto\": 10000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/users/1/total_compra",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"1",
+										"total_compra"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"monto\": 10000\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/users/1/total_compra",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"users",
+												"1",
+												"total_compra"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 13:50:21 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "205"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Total de compra actualizado correctamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": {\n        \"descuento_exclusivo\": true,\n        \"fecha_inicio_descuento\": \"2025-04-21\",\n        \"total_compra\": 22000\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Inactivar descuento",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/users/1/descuento",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"1",
+										"descuento"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/users/1/descuento",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"users",
+												"1",
+												"descuento"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 13:52:37 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "89"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Descuento exclusivo desactivado.\",\n    \"OK\": true,\n    \"RESPUESTA\": {}\n}"
+								}
+							]
+						},
+						{
+							"name": "Verificar descuento",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/users/1/descuento",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"users",
+										"1",
+										"descuento"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/users/1/descuento",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"users",
+												"1",
+												"descuento"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 13:52:37 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "89"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Descuento exclusivo desactivado.\",\n    \"OK\": true,\n    \"RESPUESTA\": {}\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "product-service",
+			"item": [
+				{
+					"name": "Productos",
+					"item": [
+						{
+							"name": "Crear producto",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Smartphone Zeta\",\r\n  \"id_categoria\": 2,\r\n  \"precio\": 299.99,\r\n  \"descripcion\": \"Teléfono inteligente con gran capacidad.\",\r\n  \"disponibilidad\": 20,\r\n  \"codigo\": \"ZETA001\",\r\n  \"valor\": 250.00,\r\n  \"fecha_de_carga\": \"2025-04-21\",\r\n  \"marcas\": [1], \r\n  \"imagenes\": [\r\n    {\r\n      \"imagen\": \"https://example.com/zeta.jpg\",\r\n      \"descripcion\": \"Vista frontal del Smartphone Zeta\"\r\n    }\r\n  ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"products"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Crear nuevo producto",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"nombre\": \"Smartphone Zeta\",\r\n  \"id_categoria\": 2,\r\n  \"precio\": 299.99,\r\n  \"descripcion\": \"Teléfono inteligente con gran capacidad.\",\r\n  \"disponibilidad\": 20,\r\n  \"codigo\": \"ZETA001\",\r\n  \"valor\": 250.00,\r\n  \"fecha_de_carga\": \"2025-04-21\",\r\n  \"marcas\": [1], \r\n  \"imagenes\": [\r\n    {\r\n      \"imagen\": \"https://example.com/zeta.jpg\",\r\n      \"descripcion\": \"Vista frontal del Smartphone Zeta\"\r\n    }\r\n  ]\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5001/products",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5001",
+											"path": [
+												"products"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 00:58:18 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "110"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Producto creado exitosamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": {\n        \"id_producto\": 1\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Actualizar producto",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"nombre\": \"Auriculares Bluetooth Pro\",\r\n  \"id_categoria\": 1,\r\n  \"precio\": 599.99,\r\n  \"descripcion\": \"Versión mejorada con mayor duración de batería.\",\r\n  \"disponibilidad\": 40,\r\n  \"codigo\": \"AURICPRO001\",\r\n  \"valor\": 499.99,\r\n  \"fecha_de_carga\": \"2025-04-22\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/products/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"products",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"nombre\": \"Auriculares Bluetooth Pro\",\r\n  \"id_categoria\": 1,\r\n  \"precio\": 599.99,\r\n  \"descripcion\": \"Versión mejorada con mayor duración de batería.\",\r\n  \"disponibilidad\": 40,\r\n  \"codigo\": \"AURICPRO001\",\r\n  \"valor\": 499.99,\r\n  \"fecha_de_carga\": \"2025-04-22\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5001/products/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5001",
+											"path": [
+												"products",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 01:04:32 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "92"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Producto actualizado correctamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": {}\n}"
+								}
+							]
+						},
+						{
+							"name": "Get by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5001/products/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"products",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get by id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5001/products/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5001",
+											"path": [
+												"products",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 01:28:49 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "571"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Producto obtenido.\",\n    \"OK\": true,\n    \"RESPUESTA\": {\n        \"categoria\": 1,\n        \"codigo\": \"AURICPRO001\",\n        \"descripcion\": \"Versión mejorada con mayor duración de batería.\",\n        \"disponibilidad\": 40,\n        \"fecha_de_carga\": \"2025-04-22\",\n        \"id_producto\": 2,\n        \"imagenes\": [\n            {\n                \"descripcion\": \"Vista frontal del Smartphone Zeta\",\n                \"imagen\": \"https://example.com/zeta.jpg\"\n            }\n        ],\n        \"marcas\": [\n            \"TechNova\"\n        ],\n        \"nombre\": \"Auriculares Bluetooth Pro\",\n        \"precio\": 599.99,\n        \"valor\": 499.99\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get all",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5001/products?page=0&size=10&sort_by=nombre&sort_dir=asc&search=",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"products"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										},
+										{
+											"key": "sort_by",
+											"value": "nombre"
+										},
+										{
+											"key": "sort_dir",
+											"value": "asc"
+										},
+										{
+											"key": "search",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5001/products?page=0&size=10&sort_by=nombre&sort_dir=asc&search=",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5001",
+											"path": [
+												"products"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0"
+												},
+												{
+													"key": "size",
+													"value": "10"
+												},
+												{
+													"key": "sort_by",
+													"value": "nombre"
+												},
+												{
+													"key": "sort_dir",
+													"value": "asc"
+												},
+												{
+													"key": "search",
+													"value": ""
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 01:28:26 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "390"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Productos obtenidos correctamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": {\n        \"pagina\": 0,\n        \"productos\": [\n            {\n                \"disponibilidad\": 40,\n                \"id_producto\": 2,\n                \"imagen\": \"https://example.com/zeta.jpg\",\n                \"nombre\": \"Auriculares Bluetooth Pro\",\n                \"precio\": 599.99,\n                \"valor\": 499.99\n            }\n        ],\n        \"tamanio\": 10,\n        \"total\": 1\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Eliminar Producto",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5001/products/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"products",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5001/products/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5001",
+											"path": [
+												"products",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 01:21:31 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "90"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Producto eliminado correctamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": {}\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Marcas",
+					"item": [
+						{
+							"name": "Actualizar marcas",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"marcas\": [1, 2]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/products/2/brands",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"products",
+										"2",
+										"brands"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Actualizar marcas",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"marcas\": [1, 2]\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5001/products/2/brands",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5001",
+											"path": [
+												"products",
+												"2",
+												"brands"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 12:21:50 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "91"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Marcas actualizadas correctamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": {}\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Imagenes",
+					"item": [
+						{
+							"name": "Actualizar imagenes",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"imagenes\": [\r\n    {\r\n      \"imagen\": \"https://example.com/img1.jpg\",\r\n      \"descripcion\": \"Imagen frontal del producto\"\r\n    },\r\n    {\r\n      \"imagen\": \"https://example.com/img2.jpg\",\r\n      \"descripcion\": \"Imagen lateral del producto\"\r\n    }\r\n  ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/products/2/images",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"products",
+										"2",
+										"images"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"imagenes\": [\r\n    {\r\n      \"imagen\": \"https://example.com/img1.jpg\",\r\n      \"descripcion\": \"Imagen frontal del producto\"\r\n    },\r\n    {\r\n      \"imagen\": \"https://example.com/img2.jpg\",\r\n      \"descripcion\": \"Imagen lateral del producto\"\r\n    }\r\n  ]\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5001/products/2/images",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5001",
+											"path": [
+												"products",
+												"2",
+												"images"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 12:23:50 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "98"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Imágenes actualizadas correctamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": {}\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Favoritos",
+					"item": [
+						{
+							"name": "Agregar a favoritos",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5001/products/favorites/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"products",
+										"favorites",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5001/products/favorites/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5001",
+											"path": [
+												"products",
+												"favorites",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 12:25:27 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "87"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Producto agregado a favoritos.\",\n    \"OK\": true,\n    \"RESPUESTA\": {}\n}"
+								}
+							]
+						},
+						{
+							"name": "Quitar de favoritos",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5001/products/favorites/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"products",
+										"favorites",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5001/products/favorites/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5001",
+											"path": [
+												"products",
+												"favorites",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 12:26:16 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "89"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Producto eliminado de favoritos.\",\n    \"OK\": true,\n    \"RESPUESTA\": {}\n}"
+								}
+							]
+						},
+						{
+							"name": "Consultar favoritos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5001/products/favorites",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"products",
+										"favorites"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5001/products/favorites",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5001",
+											"path": [
+												"products",
+												"favorites"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 12:43:24 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "390"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Favoritos obtenidos correctamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": {\n        \"pagina\": 0,\n        \"productos\": [\n            {\n                \"disponibilidad\": 40,\n                \"id_producto\": 2,\n                \"imagen\": \"https://example.com/img1.jpg\",\n                \"nombre\": \"Auriculares Bluetooth Pro\",\n                \"precio\": 599.99,\n                \"valor\": 499.99\n            }\n        ],\n        \"tamanio\": 10,\n        \"total\": 1\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Catalogos",
+					"item": [
+						{
+							"name": "Mas vendidos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5001/products/catalogo/mas-vendidos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"products",
+										"catalogo",
+										"mas-vendidos"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5001/products/catalogo/mas-vendidos",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5001",
+											"path": [
+												"products",
+												"catalogo",
+												"mas-vendidos"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 12:51:28 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "396"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Productos obtenidos.\",\n    \"OK\": true,\n    \"RESPUESTA\": {\n        \"pagina\": 0,\n        \"productos\": [\n            {\n                \"calificacion\": 0,\n                \"id_producto\": 2,\n                \"imagen\": \"https://example.com/img1.jpg\",\n                \"nombre\": \"Auriculares Bluetooth Pro\",\n                \"precio\": 599.99,\n                \"valor\": 499.99,\n                \"ventas\": 0\n            }\n        ],\n        \"tamanio\": 10,\n        \"total\": 1\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Ofertas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5001/products/catalogo/ofertas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"products",
+										"catalogo",
+										"ofertas"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5001/products/catalogo/ofertas",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5001",
+											"path": [
+												"products",
+												"catalogo",
+												"ofertas"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 12:52:12 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "396"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Productos obtenidos.\",\n    \"OK\": true,\n    \"RESPUESTA\": {\n        \"pagina\": 0,\n        \"productos\": [\n            {\n                \"calificacion\": 0,\n                \"id_producto\": 2,\n                \"imagen\": \"https://example.com/img1.jpg\",\n                \"nombre\": \"Auriculares Bluetooth Pro\",\n                \"precio\": 599.99,\n                \"valor\": 499.99,\n                \"ventas\": 0\n            }\n        ],\n        \"tamanio\": 10,\n        \"total\": 1\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Categorias",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5001/products/catalogo/categoria/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"products",
+										"catalogo",
+										"categoria",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5001/products/catalogo/categoria/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5001",
+											"path": [
+												"products",
+												"catalogo",
+												"categoria",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 12:52:52 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "396"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Productos obtenidos.\",\n    \"OK\": true,\n    \"RESPUESTA\": {\n        \"pagina\": 0,\n        \"productos\": [\n            {\n                \"calificacion\": 0,\n                \"id_producto\": 2,\n                \"imagen\": \"https://example.com/img1.jpg\",\n                \"nombre\": \"Auriculares Bluetooth Pro\",\n                \"precio\": 599.99,\n                \"valor\": 499.99,\n                \"ventas\": 0\n            }\n        ],\n        \"tamanio\": 10,\n        \"total\": 1\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Calificacion",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5001/products/catalogo/calificacion",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"products",
+										"catalogo",
+										"calificacion"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5001/products/catalogo/calificacion",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5001",
+											"path": [
+												"products",
+												"catalogo",
+												"calificacion"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 12:53:35 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "396"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Productos obtenidos.\",\n    \"OK\": true,\n    \"RESPUESTA\": {\n        \"pagina\": 0,\n        \"productos\": [\n            {\n                \"calificacion\": 0,\n                \"id_producto\": 2,\n                \"imagen\": \"https://example.com/img1.jpg\",\n                \"nombre\": \"Auriculares Bluetooth Pro\",\n                \"precio\": 599.99,\n                \"valor\": 499.99,\n                \"ventas\": 0\n            }\n        ],\n        \"tamanio\": 10,\n        \"total\": 1\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Nuevo",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5001/products/catalogo/nuevos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"products",
+										"catalogo",
+										"nuevos"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5001/products/catalogo/nuevos",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5001",
+											"path": [
+												"products",
+												"catalogo",
+												"nuevos"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 12:54:28 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "396"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Productos obtenidos.\",\n    \"OK\": true,\n    \"RESPUESTA\": {\n        \"pagina\": 0,\n        \"productos\": [\n            {\n                \"calificacion\": 0,\n                \"id_producto\": 2,\n                \"imagen\": \"https://example.com/img1.jpg\",\n                \"nombre\": \"Auriculares Bluetooth Pro\",\n                \"precio\": 599.99,\n                \"valor\": 499.99,\n                \"ventas\": 0\n            }\n        ],\n        \"tamanio\": 10,\n        \"total\": 1\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Rango",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5001/products/catalogo/rango?max=3000&min=0",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"products",
+										"catalogo",
+										"rango"
+									],
+									"query": [
+										{
+											"key": "max",
+											"value": "3000"
+										},
+										{
+											"key": "min",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5001/products/catalogo/rango?max=3000&min=0",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5001",
+											"path": [
+												"products",
+												"catalogo",
+												"rango"
+											],
+											"query": [
+												{
+													"key": "max",
+													"value": "3000"
+												},
+												{
+													"key": "min",
+													"value": "0"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 12:55:42 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "396"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Productos obtenidos.\",\n    \"OK\": true,\n    \"RESPUESTA\": {\n        \"pagina\": 0,\n        \"productos\": [\n            {\n                \"calificacion\": 0,\n                \"id_producto\": 2,\n                \"imagen\": \"https://example.com/img1.jpg\",\n                \"nombre\": \"Auriculares Bluetooth Pro\",\n                \"precio\": 599.99,\n                \"valor\": 499.99,\n                \"ventas\": 0\n            }\n        ],\n        \"tamanio\": 10,\n        \"total\": 1\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Marca",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5001/products/catalogo/marca/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"products",
+										"catalogo",
+										"marca",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5001/products/catalogo/marca/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5001",
+											"path": [
+												"products",
+												"catalogo",
+												"marca",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 12:56:21 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "396"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Productos obtenidos.\",\n    \"OK\": true,\n    \"RESPUESTA\": {\n        \"pagina\": 0,\n        \"productos\": [\n            {\n                \"calificacion\": 0,\n                \"id_producto\": 2,\n                \"imagen\": \"https://example.com/img1.jpg\",\n                \"nombre\": \"Auriculares Bluetooth Pro\",\n                \"precio\": 599.99,\n                \"valor\": 499.99,\n                \"ventas\": 0\n            }\n        ],\n        \"tamanio\": 10,\n        \"total\": 1\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Marcas y categorias",
+					"item": [
+						{
+							"name": "Obtener Categorias",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5001/products/categorias",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"products",
+										"categorias"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5001/products/categorias",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5001",
+											"path": [
+												"products",
+												"categorias"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 13:11:26 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "790"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Categorías obtenidas correctamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": [\n        {\n            \"descripcion\": \"Productos relacionados con tecnología: celulares, laptops, tablets.\",\n            \"id_categoria\": 1,\n            \"nombre\": \"Tecnología\"\n        },\n        {\n            \"descripcion\": \"Electrodomésticos y artículos para el hogar.\",\n            \"id_categoria\": 2,\n            \"nombre\": \"Hogar\"\n        },\n        {\n            \"descripcion\": \"Productos de salud, higiene y cuidado personal.\",\n            \"id_categoria\": 3,\n            \"nombre\": \"Salud\"\n        },\n        {\n            \"descripcion\": \"Ropa, calzado y accesorios.\",\n            \"id_categoria\": 4,\n            \"nombre\": \"Moda\"\n        },\n        {\n            \"descripcion\": \"Literatura, libros técnicos y educativos.\",\n            \"id_categoria\": 5,\n            \"nombre\": \"Libros\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Obtener Marcas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5001/products/marcas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"products",
+										"marcas"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5001/products/marcas",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5001",
+											"path": [
+												"products",
+												"marcas"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 13:17:03 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "919"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Marcas obtenidas correctamente.\",\n    \"OK\": true,\n    \"RESPUESTA\": [\n        {\n            \"descripcion\": \"Fabricante de dispositivos móviles y accesorios.\",\n            \"fabricante\": \"TechNova Inc.\",\n            \"id_marca\": 1,\n            \"marca\": \"TechNova\"\n        },\n        {\n            \"descripcion\": \"Productos ecológicos para el hogar.\",\n            \"fabricante\": \"EcoHome Solutions\",\n            \"id_marca\": 2,\n            \"marca\": \"EcoHome\"\n        },\n        {\n            \"descripcion\": \"Equipos tecnológicos para gaming y alto rendimiento.\",\n            \"fabricante\": \"MaxGear Ltd.\",\n            \"id_marca\": 3,\n            \"marca\": \"MaxGear\"\n        },\n        {\n            \"descripcion\": \"Productos de salud y bienestar.\",\n            \"fabricante\": \"BioLife Corp.\",\n            \"id_marca\": 4,\n            \"marca\": \"BioLife\"\n        },\n        {\n            \"descripcion\": \"Ropa y accesorios de moda urbana.\",\n            \"fabricante\": \"UrbanStyle Group\",\n            \"id_marca\": 5,\n            \"marca\": \"UrbanStyle\"\n        }\n    ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Shared",
+					"item": [
+						{
+							"name": "Actualizar ventas",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"cantidad_vendida\": 20\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5001/products/ventas/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5001",
+									"path": [
+										"products",
+										"ventas",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "order-service",
+			"item": [
+				{
+					"name": "Descuentos",
+					"item": [
+						{
+							"name": "Obtener descuentos de productos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5002/orders/producto",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5002",
+									"path": [
+										"orders",
+										"producto"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Crear Descuento para usuario Copy",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id_usuario\": 1, \r\n    \"porcentaje_descuento\": 12\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5002/orders/usuario",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5002",
+									"path": [
+										"orders",
+										"usuario"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Obtener descuentos de productos Copy",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id_usuario\": 1, \r\n    \"porcentaje_descuento\": 12\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5002/orders/usuario",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5002",
+											"path": [
+												"orders",
+												"usuario"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 24 Apr 2025 14:56:27 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "68"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Descuento creado para usuario.\",\n    \"OK\": true\n}"
+								},
+								{
+									"name": "Crear Descuento para usuario Copy",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id_usuario\": 1, \r\n    \"porcentaje_descuento\": 12\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5002/orders/usuario",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5002",
+											"path": [
+												"orders",
+												"usuario"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 24 Apr 2025 15:02:48 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "405"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"OK\": true,\n    \"RESPUESTA\": [\n        {\n            \"id_descuento\": 1,\n            \"id_producto\": null,\n            \"id_usuario\": 1,\n            \"porcentaje_descuento\": 1\n        },\n        {\n            \"id_descuento\": 3,\n            \"id_producto\": null,\n            \"id_usuario\": 1,\n            \"porcentaje_descuento\": 12\n        },\n        {\n            \"id_descuento\": 4,\n            \"id_producto\": null,\n            \"id_usuario\": 1,\n            \"porcentaje_descuento\": 5\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Obtener descuentos de temporada",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5002/orders/temporada",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5002",
+									"path": [
+										"orders",
+										"temporada"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Obtener descuentos de productos Copy",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id_usuario\": 1, \r\n    \"porcentaje_descuento\": 12\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5002/orders/usuario",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5002",
+											"path": [
+												"orders",
+												"usuario"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 24 Apr 2025 14:56:27 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "68"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Descuento creado para usuario.\",\n    \"OK\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "Crear Descuento para usuario",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id_usuario\": 1, \r\n    \"id_producto\": null,\r\n    \"porcentaje_descuento\": 12\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5002/orders/usuario",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5002",
+									"path": [
+										"orders",
+										"usuario"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Obtener descuentos de productos Copy",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"id_usuario\": 1, \r\n    \"id_producto\": null,\r\n    \"porcentaje_descuento\": 12\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5002/orders/usuario",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5002",
+											"path": [
+												"orders",
+												"usuario"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "Werkzeug/3.1.3 Python/3.12.10"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 24 Apr 2025 15:00:58 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Length",
+											"value": "68"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"DESCRIPCION\": \"Descuento creado para usuario.\",\n    \"OK\": true\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "return-service",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4006/return/5/reactivate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4006",
+							"path": [
+								"return",
+								"5",
+								"reactivate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2IiwidGlwbyI6ImFkbWluIiwiZXhwIjoxNzQ1NTEyMDE4fQ.fMN45C_kcVMns6G9rBdEyWsMw9iJVuThzDrLhxObakI",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
